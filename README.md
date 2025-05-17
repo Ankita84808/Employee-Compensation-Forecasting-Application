@@ -1,2 +1,3 @@
-# Employee-Compensation-Forecasting-Application
-Design and build a basic Employee Compensation Forecasting Application for a mid-sized organization.
+# Employee Compensation Forecasting Application
+
+This project forecasts employee compensation based on historical data.
