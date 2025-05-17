@@ -1,0 +1,24 @@
+
+CREATE DATABASE IF NOT EXISTS SR_EmployeeCon;
+USE SR_EmployeeCon;
+
+CREATE TABLE Roles (
+    RoleID INT AUTO_INCREMENT PRIMARY KEY,
+    RoleName VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE Locations (
+    LocationID INT AUTO_INCREMENT PRIMARY KEY,
+    LocationName VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE Employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    RoleID INT,
+    LocationID INT,
+    Compensation DECIMAL(10,2),
+    IsActive BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (RoleID) REFERENCES Roles(RoleID),
+    FOREIGN KEY (LocationID) REFERENCES Locations(LocationID)
+);
